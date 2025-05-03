@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Homepage</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f5f5f5;
+      --btn-bg: #000000;
+      --btn-color: #ffffff;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #ffffff;
+      --card-bg: #2e2e2e;
+      --btn-bg: #ffffff;
+      --btn-color: #000000;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    header {
+      background: #0077cc;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background: #005fa3;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 8px;
+      width: 280px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .toggle-btn {
+      margin: 20px auto;
+      display: block;
+      padding: 10px 20px;
+      background: var(--btn-bg);
+      color: var(--btn-color);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Homepage</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Build Your Web Presence</h1>
+    <p>We help you go online with confidence and style.</p>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>Fast & Responsive</h3>
+      <p>Our websites load quickly and look great on all devices.</p>
+    </div>
+    <div class="card">
+      <h3>SEO Optimized</h3>
+      <p>Rank higher on search engines and get more visitors.</p>
+    </div>
+    <div class="card">
+      <h3>Custom Design</h3>
+      <p>Tailor-made designs that reflect your brand identity.</p>
+    </div>
+  </section>
+
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <footer>
+    &copy; 2025 MyHomepage. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
